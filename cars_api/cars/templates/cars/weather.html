@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .weather-container {
+            max-width: 400px;
+            max-height: 810px;
+            margin: 50px auto;
+            background-color: #9370DB;
+            padding: 10px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px #4B0082(0, 0, 0, 0.1);
+        }
+        .weather-box {
+            margin-bottom: 15px;
+            padding: 15px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            background-color: #4B0082;
+        }
+        .weather-detail {
+            margin-bottom: 5px;
+            font-size: 30px;
+            font-weight: bold;
+            color: #6495ED;
+        }
+        .weather-detail-label {
+            font-weight: bold;
+            color: #6495ED;
+        }
+    </style>
+</head>
+<body>
+    <div class="weather-container">
+        <h3 style="text-align: center;">Current Weather in Rostok</h3>
+        <div class="weather-box">
+            <div class="weather-detail">
+                <span class="weather-detail-label">Detailed Status:</span> {{ detailed_status }}
+            </div>
+        </div>
+        <div class="weather-box">
+            <div class="weather-detail">
+                <span class="weather-detail-label">Wind Speed:</span> {{ wind_speed }} m/s
+            </div>
+        </div>
+        <div class="weather-box">
+            <div class="weather-detail">
+                <span class="weather-detail-label">Humidity:</span> {{ humidity }}%
+            </div>
+        </div>
+        <div class="weather-box">
+            <div class="weather-detail">
+                <span class="weather-detail-label">Temperature:</span> {{ temperature }}°C
+            </div>
+        </div>
+        <div class="weather-box">
+            <div class="weather-detail">
+                <span class="weather-detail-label">Clouds:</span> {{ clouds }}%
+            </div>
+        </div>
+    </div>
+</body>
+</html>
